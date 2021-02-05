@@ -1,16 +1,21 @@
-.home {
+#home {
   position: relative;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 .introduce {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
   max-width: 900px;
   left: 0;
   right: 0;
-  top: 35vh;
   text-align: center;
   user-select: none;
   z-index: 5;
@@ -71,12 +76,13 @@
 }
 
 .scroll-down {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   width: max-content;
-  bottom: -16rem;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
 
   &:hover .scroll-text::after,
   &:focus .scroll-text::after {
@@ -96,7 +102,9 @@
 
   .scroll-arrow {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 32px;
     margin-right: 1.6rem;
