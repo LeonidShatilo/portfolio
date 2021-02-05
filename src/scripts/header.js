@@ -12,7 +12,7 @@ let isOpenMenu = false;
 
 function hideMenu() {
   isOpenMenu = false;
-  ARROW.classList.toggle('arrow--up');
+  ARROW.classList.remove('arrow--up');
   DROPDOWN_MENU.classList.remove('dropdown-menu--open');
   setTimeout(() => {
     DROPDOWN_MENU.style.display = 'none';
@@ -21,7 +21,7 @@ function hideMenu() {
 
 function showMenu() {
   isOpenMenu = true;
-  ARROW.classList.toggle('arrow--up');
+  ARROW.classList.add('arrow--up');
   DROPDOWN_MENU.style.display = 'block';
   setTimeout(() => {
     DROPDOWN_MENU.classList.add('dropdown-menu--open');
@@ -41,17 +41,17 @@ function changeLanguage(selected, another) {
   another.removeAttribute('disabled');
   selected.classList.add('button--active');
   another.classList.remove('button--active');
-  DROPDOWN_MENU.classList.remove('dropdown-menu--open');
-  isOpenMenu = false;
 }
 
 BUTTON_EN_LANG.addEventListener('click', () => {
   changeLanguage(BUTTON_EN_LANG, BUTTON_RU_LANG);
+  hideMenu();
   CURRENT_LANG.innerHTML = 'EN';
 });
 
 BUTTON_RU_LANG.addEventListener('click', () => {
   changeLanguage(BUTTON_RU_LANG, BUTTON_EN_LANG);
+  hideMenu();
   CURRENT_LANG.innerHTML = 'RU';
 });
 
