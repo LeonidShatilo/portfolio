@@ -1,0 +1,35 @@
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.preloader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background-color: #050505;
+  user-select: none;
+  opacity: 1;
+  z-index: 1000;
+  transition: opacity 0.8s ease-in-out;
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    background-image: url('../../assets/images/svg/preloader.svg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+
+    &--hide {
+      opacity: 0;
+    }
+  }
+
+  &--hide {
+    opacity: 0;
+  }
+}
