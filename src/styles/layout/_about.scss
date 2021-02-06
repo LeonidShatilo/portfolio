@@ -15,14 +15,17 @@
   width: 1024px;
   height: max-content;
   margin: 17rem auto 10rem;
-  padding: 0 5rem 0;
+  padding: 0 4rem 0;
 }
 
 .about {
+  &__image {
+    margin-right: 10rem;
+  }
+
   &__image img {
     width: 200px;
     height: 200px;
-    margin-right: 10rem;
     border: 1.5rem solid #ffffff05;
     border-radius: 50%;
     pointer-events: none;
