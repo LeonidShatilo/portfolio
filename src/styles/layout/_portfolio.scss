@@ -25,6 +25,38 @@
     font-size: 3.5rem;
     font-weight: 600;
   }
+
+  &__filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    margin-bottom: 2rem;
+
+    &-button {
+      padding: 1rem;
+      color: #000;
+      border: 2px solid #ff763f;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in;
+
+      &--active,
+      &:hover {
+        background-color: #ff763f;
+        color: #ffffff;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .work {
