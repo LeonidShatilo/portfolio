@@ -25,7 +25,7 @@
     >
       <nav class="header__nav">
         <ul>
-          <li class="button_nav active">
+          <li class="button_nav button_nav--active">
             <a href="#home">Home</a>
           </li>
           <li class="button_nav">
@@ -46,7 +46,7 @@
         </button>
         <div class="dropdown-menu">
           <button
-            class="dropdown-menu__item button button--active"
+            class="dropdown-menu__item button dropdown-menu__item--active"
             disabled
             id="en"
           >
@@ -230,21 +230,37 @@
     </section>
     <section id="portfolio" class="section">
       <div class="portfolio__wrapper">
-        <h2
-          class="portfolio__header"
-          data-aos="fade-down"
-          data-aos-offset="200"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <h2 class="portfolio__header">
           My works, made in the process of learning
         </h2>
+        <div class="portfolio__filter">
+          <button
+            class="portfolio__filter-button portfolio__filter-button--active"
+            value="all"
+          >
+            All
+          </button>
+          <button class="portfolio__filter-button" value="html">HTML</button>
+          <button class="portfolio__filter-button" value="css">CSS</button>
+          <button class="portfolio__filter-button" value="sass">SASS</button>
+          <button class="portfolio__filter-button" value="java-script">
+            JavaScript
+          </button>
+          <button class="portfolio__filter-button" value="webpack">
+            Webpack
+          </button>
+          <button class="portfolio__filter-button" value="node-js">
+            Node.js
+          </button>
+          <button class="portfolio__filter-button" value="websocket">
+            WebSocket
+          </button>
+          <button class="portfolio__filter-button" value="rest-api">
+            REST API
+          </button>
+        </div>
         <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
+          class="work_wrapper all html sass java-script webpack node-js rest-api"
         >
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
@@ -289,13 +305,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img src="./assets/images/png/raindrops.png" alt="raindrops" />
@@ -332,13 +342,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script websocket node-js">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img src="./assets/images/png/chat-app.png" alt="chat-app" />
@@ -363,18 +367,12 @@
                 >This project uses technologies such as:</span
               >
               <span class="work__technologies-list"
-                >HTML, CSS, JavaScript, EJS, WebSocket, Node.js</span
+                >HTML, CSS, JavaScript, WebSocket, Node.js</span
               >
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -410,13 +408,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img src="./assets/images/png/calculator.png" alt="calculator" />
@@ -452,13 +444,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -498,13 +484,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -542,13 +522,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -586,13 +560,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -629,13 +597,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img src="./assets/images/png/drum-kit.png" alt="drum-kit" />
@@ -670,13 +632,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img src="./assets/images/png/fun-canvas.png" alt="fun-canvas" />
@@ -712,13 +668,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -755,13 +705,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -798,13 +742,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img
@@ -841,13 +779,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="work_wrapper"
-          data-aos="flip-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
+        <div class="work_wrapper all html css java-script">
           <div class="work__screenshot">
             <div class="work__screenshot-overlay">
               <img

@@ -8,11 +8,11 @@ window.addEventListener('scroll', () => {
   SECTIONS.forEach((element, index) => {
     if (element.offsetTop - HEADER.clientHeight <= SCROLL_DISTANCE) {
       BUTTONS_NAV.forEach((element) => {
-        if (element.classList.contains('active')) {
-          element.classList.remove('active');
+        if (element.classList.contains('button_nav--active')) {
+          element.classList.remove('button_nav--active');
         }
       });
-      BUTTONS_NAV[index].classList.add('active');
+      BUTTONS_NAV[index].classList.add('button_nav--active');
     }
   });
 });

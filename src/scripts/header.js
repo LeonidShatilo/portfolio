@@ -39,8 +39,8 @@ BUTTON_LANGUAGE.addEventListener('click', () => {
 function changeLanguage(selected, another) {
   selected.disabled = 'true';
   another.removeAttribute('disabled');
-  selected.classList.add('button--active');
-  another.classList.remove('button--active');
+  selected.classList.add('dropdown-menu__item--active');
+  another.classList.remove('dropdown-menu__item--active');
 }
 
 BUTTON_EN_LANG.addEventListener('click', () => {
