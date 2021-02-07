@@ -9,26 +9,26 @@
   user-select: none;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 1024px;
-  height: max-content;
-  margin: 17rem auto 10rem;
-  padding: 0 4rem 0;
-}
-
 .about {
-  &__image {
-    margin-right: 10rem;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1024px;
+    height: max-content;
+    margin: 17rem auto 10rem;
+    padding: 0 4rem;
   }
 
-  &__image img {
-    width: 200px;
-    height: 200px;
-    border: 1.5rem solid #ffffff05;
-    border-radius: 50%;
-    pointer-events: none;
+  &__image {
+    margin-right: 10rem;
+
+    & img {
+      width: 200px;
+      height: 200px;
+      border: 1.5rem solid #ffffff05;
+      border-radius: 50%;
+      pointer-events: none;
+    }
   }
 
   &__content {
