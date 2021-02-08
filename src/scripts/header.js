@@ -1,3 +1,6 @@
+import { CONTENT } from './content';
+import { translate } from './utils';
+
 const HOME = document.getElementById('home');
 const HEADER = document.querySelector('.header');
 const BUTTONS_NAV = document.querySelectorAll('.button_nav');
@@ -9,6 +12,25 @@ const ARROW = document.querySelector('.arrow');
 const DROPDOWN_MENU = document.querySelector('.dropdown-menu');
 
 let isOpenMenu = false;
+
+export function getLanguageInLocalStorage() {
+  if (
+    localStorage.getItem('language') === null
+    || localStorage.getItem('language') === 'en'
+  ) {
+    CONTENT.language = 'en';
+    BUTTON_EN_LANG.classList.add('dropdown-menu__item--active');
+    BUTTON_RU_LANG.classList.remove('dropdown-menu__item--active');
+  } else {
+    CONTENT.language = 'ru';
+    BUTTON_RU_LANG.classList.add('dropdown-menu__item--active');
+    BUTTON_EN_LANG.classList.remove('dropdown-menu__item--active');
+  }
+}
+
+export function setLanguageInLocalStorage() {
+  localStorage.setItem('language', CONTENT.language);
+}
 
 function hideMenu() {
   isOpenMenu = false;
@@ -44,12 +66,18 @@ function changeLanguage(selected, another) {
 }
 
 BUTTON_EN_LANG.addEventListener('click', () => {
+  CONTENT.language = 'en';
+  setLanguageInLocalStorage();
+  translate();
   changeLanguage(BUTTON_EN_LANG, BUTTON_RU_LANG);
   hideMenu();
   CURRENT_LANG.innerHTML = 'EN';
 });
 
 BUTTON_RU_LANG.addEventListener('click', () => {
+  CONTENT.language = 'ru';
+  setLanguageInLocalStorage();
+  translate();
   changeLanguage(BUTTON_RU_LANG, BUTTON_EN_LANG);
   hideMenu();
   CURRENT_LANG.innerHTML = 'RU';
@@ -70,8 +98,8 @@ document.onclick = (event) => {
 
 for (let index = 0; index < BUTTONS_NAV.length; index++) {
   BUTTONS_NAV[index].addEventListener('click', (event) => {
-    BUTTONS_NAV.forEach((element) => element.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    BUTTONS_NAV.forEach((element) => element.classList.remove('button_nav--active'));
+    event.currentTarget.classList.add('button_nav--active');
   });
 }
 
