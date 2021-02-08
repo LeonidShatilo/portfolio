@@ -53,7 +53,9 @@ export const CONTENT = {
             <a href="https://rs.school/" target="_blank"
               >The Rolling Scopes School</a
             >
-            course under the guidance of a mentor.`,
+            course under the guidance of a mentor.
+            <br /><br />
+            During the training period I mastered:`,
       ru: `Изучал Frontend разработку в
             <a
               href="https://careers.epam.by/training/upskilllab"
@@ -64,11 +66,21 @@ export const CONTENT = {
             <a href="https://rs.school/" target="_blank"
               >The Rolling Scopes School</a
             >
-            под руководством ментора.`,
+            под руководством ментора.
+            <br /><br />
+            За время обучения я освоил:`,
     },
-    mastered: {
-      en: 'During the training period I mastered:',
-      ru: 'За время обучения я освоил:',
+    versionControl: {
+      en: 'Version Control System',
+      ru: 'Система контроля версий',
+    },
+    moduleBundler: {
+      en: 'Module bundler',
+      ru: 'Сборщик модулей',
+    },
+    preprocessor: {
+      en: 'Preprocessor',
+      ru: 'Препроцессор',
     },
   },
   portfolio: {
@@ -121,9 +133,13 @@ export const CONTENT = {
     },
     socket: {
       en: `Chat application for sending and receiving messages in real time.
-          The application has a client part and a server part.`,
+          The application has a client part and a server part.<br /><br />The demonstration 
+          requires you to clone the repository, install the dependencies, and 
+          run the server.`,
       ru: `Чат-приложение для отправки и получения сообщений в режиме 
-          реального времени. Приложение имеет клиентскую и серверную часть.`,
+          реального времени. Приложение имеет клиентскую и серверную часть.<br /><br />
+          Для демонстрации необходимо склонировать репозиторий, установить 
+          зависимости и запустить сервер.`,
     },
     singolo: {
       en: `Single-page adaptive website, composed by the layout of Figma.`,

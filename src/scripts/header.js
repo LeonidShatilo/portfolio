@@ -3,7 +3,7 @@ import { translate } from './utils';
 
 const HOME = document.getElementById('home');
 const HEADER = document.querySelector('.header');
-const BUTTONS_NAV = document.querySelectorAll('.button_nav');
+const BUTTONS_NAV = document.querySelectorAll('.button__nav');
 const BUTTON_LANGUAGE = document.querySelector('.button__language');
 const BUTTON_EN_LANG = document.getElementById('en');
 const BUTTON_RU_LANG = document.getElementById('ru');
@@ -13,18 +13,27 @@ const DROPDOWN_MENU = document.querySelector('.dropdown-menu');
 
 let isOpenMenu = false;
 
+function changeStatusLangButtons(selected, another) {
+  selected.disabled = 'true';
+  another.removeAttribute('disabled');
+  selected.classList.add('dropdown-menu__item--active');
+  another.classList.remove('dropdown-menu__item--active');
+}
+
 export function getLanguageInLocalStorage() {
   if (
     localStorage.getItem('language') === null
     || localStorage.getItem('language') === 'en'
   ) {
     CONTENT.language = 'en';
-    BUTTON_EN_LANG.classList.add('dropdown-menu__item--active');
-    BUTTON_RU_LANG.classList.remove('dropdown-menu__item--active');
+    CURRENT_LANG.innerHTML = `${CONTENT.language}`;
+    document.title = 'Leonid Shatilo';
+    changeStatusLangButtons(BUTTON_EN_LANG, BUTTON_RU_LANG);
   } else {
     CONTENT.language = 'ru';
-    BUTTON_RU_LANG.classList.add('dropdown-menu__item--active');
-    BUTTON_EN_LANG.classList.remove('dropdown-menu__item--active');
+    CURRENT_LANG.innerHTML = `${CONTENT.language}`;
+    document.title = 'Леонид Шатило';
+    changeStatusLangButtons(BUTTON_RU_LANG, BUTTON_EN_LANG);
   }
 }
 
@@ -58,29 +67,22 @@ BUTTON_LANGUAGE.addEventListener('click', () => {
   }
 });
 
-function changeLanguage(selected, another) {
-  selected.disabled = 'true';
-  another.removeAttribute('disabled');
-  selected.classList.add('dropdown-menu__item--active');
-  another.classList.remove('dropdown-menu__item--active');
-}
-
 BUTTON_EN_LANG.addEventListener('click', () => {
   CONTENT.language = 'en';
   setLanguageInLocalStorage();
   translate();
-  changeLanguage(BUTTON_EN_LANG, BUTTON_RU_LANG);
+  changeStatusLangButtons(BUTTON_EN_LANG, BUTTON_RU_LANG);
   hideMenu();
-  CURRENT_LANG.innerHTML = 'EN';
+  CURRENT_LANG.innerHTML = 'en';
 });
 
 BUTTON_RU_LANG.addEventListener('click', () => {
   CONTENT.language = 'ru';
   setLanguageInLocalStorage();
   translate();
-  changeLanguage(BUTTON_RU_LANG, BUTTON_EN_LANG);
+  changeStatusLangButtons(BUTTON_RU_LANG, BUTTON_EN_LANG);
   hideMenu();
-  CURRENT_LANG.innerHTML = 'RU';
+  CURRENT_LANG.innerHTML = 'ru';
 });
 
 document.onclick = (event) => {
@@ -98,8 +100,8 @@ document.onclick = (event) => {
 
 for (let index = 0; index < BUTTONS_NAV.length; index++) {
   BUTTONS_NAV[index].addEventListener('click', (event) => {
-    BUTTONS_NAV.forEach((element) => element.classList.remove('button_nav--active'));
-    event.currentTarget.classList.add('button_nav--active');
+    BUTTONS_NAV.forEach((element) => element.classList.remove('button__nav--active'));
+    event.currentTarget.classList.add('button__nav--active');
   });
 }
 

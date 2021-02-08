@@ -51,7 +51,12 @@
   right: 2.5rem;
 }
 
-.button {
+.current-language {
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+
+.button__language {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -63,6 +68,7 @@
   color: #ffffff;
   background: none;
   cursor: pointer;
+  text-transform: uppercase;
   opacity: 0.6;
   transition: opacity 0.5s linear;
 
@@ -75,13 +81,9 @@
   }
 }
 
-.button_nav--active a {
+.button__nav--active a {
   color: #ffffff;
   opacity: 1;
-}
-
-.current-language {
-  margin-right: 0.5rem;
 }
 
 .arrow {

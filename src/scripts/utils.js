@@ -12,7 +12,9 @@ const SCROLL_TEXT = document.querySelector('.scroll-text');
 
 const ABOUT_TITLE = document.querySelector('.about__title');
 const ABOUT_DESCRIPTION = document.querySelector('.about__description');
-const ABOUT_MASTERED = document.querySelector('.about__mastered');
+const VERSION_CONTROL = document.querySelector('.version-control');
+const MODULE_BUNDLER = document.querySelector('.module-bundler');
+const PREPROCESSOR = document.querySelector('.preprocessor');
 
 const PORTFOLIO_HEADER = document.querySelector('.portfolio__header');
 const FILTER_TITLE = document.querySelector('.filter__title');
@@ -54,7 +56,9 @@ export function translate() {
 
   ABOUT_TITLE.innerHTML = CONTENT.about.title[CONTENT.language];
   ABOUT_DESCRIPTION.innerHTML = CONTENT.about.description[CONTENT.language];
-  ABOUT_MASTERED.innerHTML = CONTENT.about.mastered[CONTENT.language];
+  VERSION_CONTROL.innerHTML = CONTENT.about.versionControl[CONTENT.language];
+  MODULE_BUNDLER.innerHTML = CONTENT.about.moduleBundler[CONTENT.language];
+  PREPROCESSOR.innerHTML = CONTENT.about.preprocessor[CONTENT.language];
 
   PORTFOLIO_HEADER.innerHTML = CONTENT.portfolio.header[CONTENT.language];
   FILTER_TITLE.innerHTML = CONTENT.portfolio.filter[CONTENT.language];

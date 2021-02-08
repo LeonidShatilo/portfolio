@@ -1,6 +1,6 @@
 const HEADER = document.querySelector('.header');
 const SECTIONS = document.querySelectorAll('.section');
-const BUTTONS_NAV = document.querySelectorAll('.button_nav');
+const BUTTONS_NAV = document.querySelectorAll('.button__nav');
 const ANCHORS = document.querySelectorAll('a[href*="#"]');
 
 window.addEventListener('scroll', () => {
@@ -9,11 +9,11 @@ window.addEventListener('scroll', () => {
   SECTIONS.forEach((element, index) => {
     if (element.offsetTop - HEADER.clientHeight <= SCROLL_DISTANCE) {
       BUTTONS_NAV.forEach((element) => {
-        if (element.classList.contains('button_nav--active')) {
-          element.classList.remove('button_nav--active');
+        if (element.classList.contains('button__nav--active')) {
+          element.classList.remove('button__nav--active');
         }
       });
-      BUTTONS_NAV[index].classList.add('button_nav--active');
+      BUTTONS_NAV[index].classList.add('button__nav--active');
     }
   });
 });
