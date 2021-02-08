@@ -18,6 +18,15 @@
     height: max-content;
     margin: 25vh auto 10rem;
     padding: 0 4rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin: subtractPercent(25vh, 0.3) auto subtractPercent(10rem, 0.4);
+      padding: 0 2.5rem;
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin: subtractPercent(25vh, 0.4) auto subtractPercent(10rem, 0.5);
+    }
   }
 
   &__title {
@@ -40,11 +49,25 @@
       bottom: 0;
       background-color: #11abb0;
     }
+
+    @media screen and (max-width: $width-laptop) {
+      margin-bottom: subtractPercent(6rem, 0.3);
+      font-size: subtractPercent(2rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-bottom: subtractPercent(6rem, 0.4);
+      font-size: subtractPercent(2rem, 0.4);
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width: $width-tablet) {
+      flex-direction: column;
+    }
   }
 
   &__subtitle {
@@ -52,6 +75,17 @@
     font-weight: 400;
     margin-right: 15rem;
     max-width: 700px;
+
+    @media screen and (max-width: $width-laptop) {
+      margin-right: subtractPercent(15rem, 0.3);
+      font-size: subtractPercent(5rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-bottom: 4rem;
+      margin-right: 0;
+      font-size: subtractPercent(5rem, 0.4);
+    }
   }
 
   &__button {
@@ -77,6 +111,16 @@
   color: #808080;
   font-size: 3rem;
   margin-bottom: 4rem;
+
+  @media screen and (max-width: $width-laptop) {
+    margin-bottom: subtractPercent(4rem, 0.3);
+    font-size: subtractPercent(3rem, 0.3);
+  }
+
+  @media screen and (max-width: $width-tablet) {
+    margin-bottom: subtractPercent(4rem, 0.4);
+    font-size: subtractPercent(3rem, 0.4);
+  }
 
   &__header {
     font-weight: 400;

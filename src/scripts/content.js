@@ -26,11 +26,11 @@ export const CONTENT = {
     },
     subtitle: {
       en: `I'm a Junior Frontend Developer located in Gomel, Belarus.<br />
-      Currently, I'm looking for a job or internship to improve my skills 
-      and knowledge. Let's start scrolling and learn more about me.`,
+        Currently, I'm looking for a job or internship to improve my skills
+        and knowledge. Let's start scrolling and learn more about me.`,
       ru: `Я начинающий Frontend разработчик, находящийся в Гомеле, Беларусь.<br />
-      В настоящее время я ищу работу или стажировку для совершенствования своих 
-      навыков и знаний.<br />Давайте начнем листать и узнаем больше обо мне.`,
+        В настоящее время я ищу работу или стажировку для совершенствования своих
+        навыков и знаний. Давайте начнем листать и узнаем больше обо мне.`,
     },
     scrollText: {
       en: `Scroll down`,
@@ -49,7 +49,7 @@ export const CONTENT = {
               target="_blank"
               >EPAM UpSkill Lab</a
             >
-            based on <br />
+            based on
             <a href="https://rs.school/" target="_blank"
               >The Rolling Scopes School</a
             >
@@ -62,7 +62,7 @@ export const CONTENT = {
               target="_blank"
               >EPAM UpSkill Lab</a
             >
-            на базе курса <br />
+            на базе курса
             <a href="https://rs.school/" target="_blank"
               >The Rolling Scopes School</a
             >

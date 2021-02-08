@@ -2,9 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  min-height: 700px;
+  min-height: 100vh;
   background-color: #1e1e1e;
   user-select: none;
 }
@@ -12,15 +10,41 @@
 .about {
   &__wrapper {
     display: flex;
-    flex-direction: row;
-    width: 1024px;
+    max-width: 1024px;
     height: max-content;
     margin: 17rem auto 10rem;
     padding: 0 4rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin: subtractPercent(17rem, 0.35) auto subtractPercent(10rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin: subtractPercent(17rem, 0.45) auto subtractPercent(10rem, 0.4);
+    }
+
+    @media screen and (max-width: $width-mobile-large) {
+      display: block;
+    }
   }
 
   &__image {
     margin-right: 10rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin-right: subtractPercent(10rem, 0.4);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-right: subtractPercent(10rem, 0.6);
+    }
+
+    @media screen and (max-width: $width-mobile-large) {
+      display: flex;
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
 
     & img {
       width: 200px;
@@ -28,32 +52,67 @@
       border: 1.5rem solid #ffffff05;
       border-radius: 50%;
       pointer-events: none;
+
+      @media screen and (max-width: $width-laptop) {
+        width: subtractPercent(200px, 0.3);
+        height: subtractPercent(200px, 0.3);
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        width: subtractPercent(200px, 0.4);
+        height: subtractPercent(200px, 0.4);
+      }
+
+      @media screen and (max-width: $width-mobile-large) {
+        width: subtractPercent(200px, 0.3);
+        height: subtractPercent(200px, 0.3);
+      }
     }
   }
 
   &__content {
-    width: max-content;
-    height: max-content;
+    max-width: 430px;
+
+    @media screen and (max-width: $width-laptop) {
+      max-width: subtractPercent(430px, 0.2);
+    }
+    @media screen and (max-width: $width-tablet) {
+      max-width: subtractPercent(430px, 0.3);
+    }
   }
 
-  &__content h2 {
+  &__title {
     margin-bottom: 2rem;
     font-size: 3rem;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #ffffff;
+
+    @media screen and (max-width: $width-laptop) {
+      font-size: subtractPercent(3rem, 0.3);
+    }
+    @media screen and (max-width: $width-tablet) {
+      font-size: subtractPercent(3rem, 0.4);
+    }
   }
 
-  &__content h3,
-  &__content ul {
+  &__description,
+  &__list {
     margin-bottom: 1.6rem;
     font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #ffffff60;
+
+    @media screen and (max-width: $width-laptop) {
+      font-size: subtractPercent(2rem, 0.3);
+    }
+    @media screen and (max-width: $width-tablet) {
+      font-size: subtractPercent(2rem, 0.4);
+    }
   }
 
-  &__content h3 a {
+  &__description a {
     color: #ffffff60;
     transition: all 0.5s ease-in-out;
 
@@ -63,8 +122,23 @@
     }
   }
 
-  &__content ul {
+  &__list {
     margin-left: 2rem;
     line-height: 4rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin-left: subtractPercent(2rem, 0.3);
+      line-height: subtractPercent(4rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-left: subtractPercent(2rem, 0.4);
+      line-height: subtractPercent(4rem, 0.4);
+    }
+
+    @media screen and (max-width: $width-mobile-large) {
+      margin-left: subtractPercent(2rem, 0.5);
+      line-height: subtractPercent(4rem, 0.5);
+    }
   }
 }

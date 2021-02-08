@@ -27,6 +27,11 @@
       &:last-child {
         margin-right: 0;
       }
+
+      @media screen and (max-width: $width-tablet) {
+        font-size: subtractPercent(1.5rem, 0.2);
+        margin-right: subtractPercent(3rem, 0.4);
+      }
     }
 
     & a {
@@ -49,6 +54,10 @@
   width: min-content;
   height: min-content;
   right: 2.5rem;
+
+  @media screen and (max-width: $width-tablet) {
+    right: subtractPercent(2.5rem, 0.2);
+  }
 }
 
 .current-language {
@@ -78,6 +87,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media screen and (max-width: $width-tablet) {
+    font-size: subtractPercent(1.5rem, 0.2);
   }
 }
 
@@ -126,5 +139,5 @@
 }
 
 .background {
-  background-color: black;
+  background-color: #000000;
 }
