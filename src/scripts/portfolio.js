@@ -9,9 +9,15 @@ FILTER.addEventListener('click', (event) => {
   }
   for (let i = 0; i < WORKS.length; i++) {
     if (WORKS[i].classList.contains(event.target.value)) {
+      setTimeout(() => {
+        WORKS[i].classList.remove('work_wrapper--hide');
+      }, 400);
       WORKS[i].style.display = 'flex';
     } else {
-      WORKS[i].style.display = 'none';
+      WORKS[i].classList.add('work_wrapper--hide');
+      setTimeout(() => {
+        WORKS[i].style.display = 'none';
+      }, 400);
     }
   }
 });
