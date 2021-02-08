@@ -1,6 +1,7 @@
 const HEADER = document.querySelector('.header');
 const SECTIONS = document.querySelectorAll('.section');
 const BUTTONS_NAV = document.querySelectorAll('.button_nav');
+const ANCHORS = document.querySelectorAll('a[href*="#"]');
 
 window.addEventListener('scroll', () => {
   const SCROLL_DISTANCE = window.scrollY;
@@ -16,3 +17,17 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// eslint-disable-next-line no-restricted-syntax
+for (const anchor of ANCHORS) {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const BLOCK_ID = anchor.getAttribute('href').substr(1);
+
+    document.getElementById(BLOCK_ID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+}
