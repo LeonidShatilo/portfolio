@@ -12,9 +12,18 @@ const SCROLL_TEXT = document.querySelector('.scroll-text');
 
 const ABOUT_TITLE = document.querySelector('.about__title');
 const ABOUT_DESCRIPTION = document.querySelector('.about__description');
-const VERSION_CONTROL = document.querySelector('.version-control');
-const MODULE_BUNDLER = document.querySelector('.module-bundler');
-const PREPROCESSOR = document.querySelector('.preprocessor');
+const METHODOLOGY_BEM = document.querySelector('.methodology-bem');
+const EDUCATION_TITLE = document.querySelector('.about__education-title');
+const INSTITUTIONS = document.querySelectorAll('.institution');
+const SPECIALITY_MASTER = document.querySelector('.speciality__master');
+const SPECIALITY_BACHELOR = document.querySelector('.speciality__bachelor');
+const DEGREE_MASTER = document.querySelector('.degree__master');
+const DEGREE_BACHELOR = document.querySelector('.degree__bachelor');
+
+const ENGLISH_TITLE = document.querySelector('.about__english-title');
+const ENGLISH_DESCRIPTION = document.querySelector(
+  '.about__english-description',
+);
 
 const PORTFOLIO_HEADER = document.querySelector('.portfolio__header');
 const FILTER_TITLE = document.querySelector('.filter__title');
@@ -56,9 +65,19 @@ export function translate() {
 
   ABOUT_TITLE.innerHTML = CONTENT.about.title[CONTENT.language];
   ABOUT_DESCRIPTION.innerHTML = CONTENT.about.description[CONTENT.language];
-  VERSION_CONTROL.innerHTML = CONTENT.about.versionControl[CONTENT.language];
-  MODULE_BUNDLER.innerHTML = CONTENT.about.moduleBundler[CONTENT.language];
-  PREPROCESSOR.innerHTML = CONTENT.about.preprocessor[CONTENT.language];
+  METHODOLOGY_BEM.innerHTML = CONTENT.about.methodologyBem[CONTENT.language];
+
+  EDUCATION_TITLE.innerHTML = CONTENT.about.education.title[CONTENT.language];
+  INSTITUTIONS.forEach((item) => {
+    item.innerHTML = CONTENT.about.education.institution[CONTENT.language];
+  });
+  SPECIALITY_MASTER.innerHTML = CONTENT.about.education.specialityMaster[CONTENT.language];
+  SPECIALITY_BACHELOR.innerHTML = CONTENT.about.education.specialityBachelor[CONTENT.language];
+  DEGREE_MASTER.innerHTML = CONTENT.about.education.degreeMaster[CONTENT.language];
+  DEGREE_BACHELOR.innerHTML = CONTENT.about.education.degreeBachelor[CONTENT.language];
+
+  ENGLISH_TITLE.innerHTML = CONTENT.about.english.title[CONTENT.language];
+  ENGLISH_DESCRIPTION.innerHTML = CONTENT.about.english.description[CONTENT.language];
 
   PORTFOLIO_HEADER.innerHTML = CONTENT.portfolio.header[CONTENT.language];
   FILTER_TITLE.innerHTML = CONTENT.portfolio.filter[CONTENT.language];

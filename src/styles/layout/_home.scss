@@ -19,44 +19,44 @@
   text-align: center;
   user-select: none;
   z-index: 5;
-}
 
-.introduce h1 {
-  margin: 0 0 1.6rem 0;
-  width: 100%;
-  font-size: 9.5rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  color: #ffffff;
+  &__title {
+    margin: 0 0 1.6rem 0;
+    width: 100%;
+    font-size: 9.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
 
-  @media screen and (max-width: $width-laptop) {
-    font-size: subtractPercent(9.5rem, 0.3);
+    @media screen and (max-width: $width-laptop) {
+      font-size: subtractPercent(9.5rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      font-size: subtractPercent(9.5rem, 0.4);
+    }
   }
 
-  @media screen and (max-width: $width-tablet) {
-    font-size: subtractPercent(9.5rem, 0.4);
-  }
-}
+  &__subtitle {
+    margin: 0;
+    padding-bottom: 4rem;
+    width: 100%;
+    font-size: 2.5rem;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
+    color: #ffffffbc;
 
-.introduce h3 {
-  margin: 0;
-  padding-bottom: 4rem;
-  width: 100%;
-  font-size: 2.5rem;
-  font-family: 'IBM Plex Serif', serif;
-  font-weight: 400;
-  color: #ffffff80;
+    @media screen and (max-width: $width-laptop) {
+      max-width: 670px;
+      font-size: subtractPercent(2.5rem, 0.3);
+      padding-bottom: subtractPercent(4rem, 0.3);
+    }
 
-  @media screen and (max-width: $width-laptop) {
-    max-width: 670px;
-    font-size: subtractPercent(2.5rem, 0.3);
-    padding-bottom: subtractPercent(4rem, 0.3);
-  }
-
-  @media screen and (max-width: $width-tablet) {
-    max-width: 570px;
-    font-size: subtractPercent(2.5rem, 0.4);
-    padding-bottom: subtractPercent(4rem, 0.4);
+    @media screen and (max-width: $width-tablet) {
+      max-width: 570px;
+      font-size: subtractPercent(2.5rem, 0.4);
+      padding-bottom: subtractPercent(4rem, 0.4);
+    }
   }
 }
 
@@ -115,19 +115,19 @@
     display: block;
     text-align: center;
     height: 1px;
-    width: 350px;
+    width: 250px;
     background-color: #ffffff40;
     transform: translate(-50%, -70px);
     bottom: 0;
     left: 50%;
 
     @media screen and (max-width: $width-laptop) {
-      width: subtractPercent(350px, 0.3);
+      width: subtractPercent(250px, 0.3);
       transform: translate(-50%, subtractPercent(-70px, 0.3));
     }
 
     @media screen and (max-width: $width-tablet) {
-      width: subtractPercent(350px, 0.4);
+      width: subtractPercent(250px, 0.4);
       transform: translate(-50%, subtractPercent(-70px, 0.4));
     }
   }

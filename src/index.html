@@ -63,12 +63,12 @@
         <h1
           class="introduce__title animate__animated animate__fadeInUp animate__delay-2s"
         >
-          I'm Leonid Shatilo.
+          Leonid Shatilo
         </h1>
         <h3
           class="introduce__subtitle animate__animated animate__fadeInUp animate__delay-2s"
         >
-          I'm a Junior Frontend Developer located in Gomel, Belarus.<br />
+          Junior Frontend Developer. Gomel, Belarus.<br />
           Currently, I'm looking for a job or internship to improve my skills
           and knowledge.<br />
           Let's start scrolling and learn more about me.
@@ -133,24 +133,6 @@
           <a
             class="social-media__link"
             target="_blank"
-            href="https://instagram.com/sh.lnd/"
-          >
-            <svg
-              viewBox="0 0 150 150"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon"
-            >
-              <path
-                d="M43.5397 0C19.5613 0 0 19.5613 0 43.5397V106.46C0 130.439 19.5613 150 43.5397 150H106.46C130.439 150 150 130.439 150 106.46V43.5397C150 19.5613 130.439 0 106.46 0H43.5397ZM43.5397 11.5385H106.46C124.196 11.5385 138.462 25.7813 138.462 43.5397V106.46C138.462 124.196 124.219 138.462 106.46 138.462H43.5397C25.8038 138.462 11.5385 124.219 11.5385 106.46V43.5397C11.5385 25.8038 25.7813 11.5385 43.5397 11.5385ZM118.269 23.0769C113.492 23.0769 109.615 26.9531 109.615 31.7308C109.615 36.5084 113.492 40.3846 118.269 40.3846C123.047 40.3846 126.923 36.5084 126.923 31.7308C126.923 26.9531 123.047 23.0769 118.269 23.0769ZM75 34.6154C52.7569 34.6154 34.6154 52.7569 34.6154 75C34.6154 97.2431 52.7569 115.385 75 115.385C97.2431 115.385 115.385 97.2431 115.385 75C115.385 52.7569 97.2431 34.6154 75 34.6154ZM75 46.1538C91.0006 46.1538 103.846 58.9994 103.846 75C103.846 91.0006 91.0006 103.846 75 103.846C58.9994 103.846 46.1538 91.0006 46.1538 75C46.1538 58.9994 58.9994 46.1538 75 46.1538Z"
-                fill="white"
-                class="instagram"
-              />
-            </svg>
-          </a>
-          <a
-            class="social-media__link"
-            target="_blank"
             href="https://join.skype.com/invite/mxnVwWanrvya"
           >
             <svg
@@ -191,52 +173,104 @@
     </section>
     <section id="about" class="section">
       <div class="about__wrapper">
-        <div
-          class="about__image"
-          data-aos="fade-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
-          <img src="./assets/images/png/my-photo.png" alt="my-photo" />
+        <div class="about__row-1">
+          <div
+            class="about__image"
+            data-aos="fade-right"
+            data-aos-offset="100"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-sine"
+          >
+            <img src="./assets/images/png/my-photo.png" alt="my-photo" />
+          </div>
+          <div
+            class="about__content"
+            data-aos="fade-right"
+            data-aos-offset="100"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-sine"
+          >
+            <h2 class="about__title">About me</h2>
+            <p class="about__description">
+              Studied Frontend Development from October 2020 to February 2021 at
+              <a
+                href="https://careers.epam.by/training/upskilllab"
+                target="_blank"
+                >EPAM UpSkill Lab</a
+              >
+              based on
+              <a href="https://rs.school/" target="_blank"
+                >The Rolling Scopes School</a
+              >
+              course under the guidance of a mentor.<br /><br />
+              During the training period I mastered:
+            </p>
+            <ul class="about__list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>JavaScript</li>
+              <li class="methodology-bem">Methodology BEM</li>
+              <li>Git</li>
+              <li>Chrome Dev Tools</li>
+              <li>Webpack</li>
+              <li>Node.js</li>
+              <li>REST API</li>
+              <li>WebSocket</li>
+            </ul>
+          </div>
         </div>
-        <div
-          class="about__content"
-          data-aos="fade-right"
-          data-aos-offset="100"
-          data-aos-duration="700"
-          data-aos-easing="ease-in-sine"
-        >
-          <h2 class="about__title">About me</h2>
-          <h3 class="about__description">
-            Studied Frontend Development at
-            <a
-              href="https://careers.epam.by/training/upskilllab"
-              target="_blank"
-              >EPAM UpSkill Lab</a
-            >
-            based on
-            <a href="https://rs.school/" target="_blank"
-              >The Rolling Scopes School</a
-            >
-            course under the guidance of a mentor.
-            <br /><br />
-            During the training period I mastered:
-          </h3>
-          <ul class="about__list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Chrome Dev Tools</li>
-            <li>
-              <span class="version-control">Version Control System</span> — Git
-            </li>
-            <li>
-              <span class="module-bundler">Module bundler</span> — Webpack
-            </li>
-            <li><span class="preprocessor">Preprocessor</span> — SASS</li>
-            <li>REST API</li>
-          </ul>
+        <div class="about__row-2">
+          <div
+            class="about__education"
+            data-aos="fade-right"
+            data-aos-offset="100"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-sine"
+          >
+            <h4 class="about__education-title">Education</h4>
+            <div class="about__education-wrapper">
+              <div class="time">
+                <p>2019</p>
+              </div>
+              <div class="description">
+                <p class="institution">
+                  Pavel Sukhoi State Technical University of Gomel
+                </p>
+                <p class="faculty-speciality speciality__master">
+                  Mechanics And Technology, Metallurgy
+                </p>
+                <p class="degree degree__master">Master</p>
+              </div>
+            </div>
+            <div class="about__education-wrapper">
+              <div class="time">
+                <p>2018</p>
+              </div>
+              <div class="description">
+                <p class="institution">
+                  Pavel Sukhoi State Technical University of Gomel
+                </p>
+                <p class="faculty-speciality speciality__bachelor">
+                  Mechanics And Technology, Foundry Machines and Technology
+                </p>
+                <p class="degree degree__bachelor">Bachelor</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="about__english"
+            data-aos="fade-right"
+            data-aos-offset="100"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-sine"
+          >
+            <h4 class="about__english-title">English</h4>
+            <p class="about__english-description">
+              At the moment my English level is A1+. I am constantly striving to
+              improve my level.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -249,7 +283,7 @@
           data-aos-duration="700"
           data-aos-easing="ease-in-sine"
         >
-          My works, made in the process of learning
+          Portfolio
         </h2>
         <div
           class="portfolio__filter"
@@ -276,11 +310,11 @@
           <button class="portfolio__filter-button" value="node-js">
             Node.js
           </button>
-          <button class="portfolio__filter-button" value="websocket">
-            WebSocket
-          </button>
           <button class="portfolio__filter-button" value="rest-api">
             REST API
+          </button>
+          <button class="portfolio__filter-button" value="websocket">
+            WebSocket
           </button>
         </div>
         <div
@@ -903,7 +937,7 @@
             data-aos-duration="700"
             data-aos-easing="ease-in-sine"
           >
-            Do you have an offer for me? Nice! Let's collaborate and create
+            Would you like to contact me? Nice! Let's collaborate and create
             something awesome together.
           </p>
           <div
@@ -988,24 +1022,6 @@
                 d="M147.167 1.87596C144.609 -0.293799 140.59 -0.604251 136.435 1.064H136.428C132.058 2.81755 12.7211 54.0047 7.86301 56.096C6.97941 56.403 -0.73755 59.2824 0.0573445 65.6961C0.76695 71.4787 6.96918 73.8736 7.72654 74.15L38.0656 84.5382C40.0784 91.2385 47.4986 115.959 49.1395 121.24C50.163 124.532 51.8313 128.858 54.755 129.748C57.3205 130.738 59.8723 129.834 61.5235 128.537L80.0722 111.333L110.016 134.685L110.729 135.111C112.762 136.012 114.71 136.462 116.569 136.462C118.005 136.462 119.384 136.193 120.701 135.654C125.187 133.811 126.981 129.537 127.169 129.052L149.535 12.7964C150.9 6.58733 149.003 3.42822 147.167 1.87596ZM64.8225 88.6935L54.5878 115.986L44.3531 81.8703L122.819 23.8737L64.8225 88.6935Z"
                 fill="white"
                 class="telegram"
-              />
-            </svg>
-          </a>
-          <a
-            class="social-media__link"
-            target="_blank"
-            href="https://instagram.com/sh.lnd/"
-          >
-            <svg
-              viewBox="0 0 150 150"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon"
-            >
-              <path
-                d="M43.5397 0C19.5613 0 0 19.5613 0 43.5397V106.46C0 130.439 19.5613 150 43.5397 150H106.46C130.439 150 150 130.439 150 106.46V43.5397C150 19.5613 130.439 0 106.46 0H43.5397ZM43.5397 11.5385H106.46C124.196 11.5385 138.462 25.7813 138.462 43.5397V106.46C138.462 124.196 124.219 138.462 106.46 138.462H43.5397C25.8038 138.462 11.5385 124.219 11.5385 106.46V43.5397C11.5385 25.8038 25.7813 11.5385 43.5397 11.5385ZM118.269 23.0769C113.492 23.0769 109.615 26.9531 109.615 31.7308C109.615 36.5084 113.492 40.3846 118.269 40.3846C123.047 40.3846 126.923 36.5084 126.923 31.7308C126.923 26.9531 123.047 23.0769 118.269 23.0769ZM75 34.6154C52.7569 34.6154 34.6154 52.7569 34.6154 75C34.6154 97.2431 52.7569 115.385 75 115.385C97.2431 115.385 115.385 97.2431 115.385 75C115.385 52.7569 97.2431 34.6154 75 34.6154ZM75 46.1538C91.0006 46.1538 103.846 58.9994 103.846 75C103.846 91.0006 91.0006 103.846 75 103.846C58.9994 103.846 46.1538 91.0006 46.1538 75C46.1538 58.9994 58.9994 46.1538 75 46.1538Z"
-                fill="white"
-                class="instagram"
               />
             </svg>
           </a>

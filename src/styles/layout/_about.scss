@@ -10,22 +10,37 @@
 .about {
   &__wrapper {
     display: flex;
-    max-width: 1024px;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1280px;
     height: max-content;
-    margin: 17rem auto 10rem;
+    margin: 12rem auto 7rem;
     padding: 0 4rem;
 
     @media screen and (max-width: $width-laptop) {
-      margin: subtractPercent(17rem, 0.35) auto subtractPercent(10rem, 0.3);
+      margin: subtractPercent(12rem, 0.1) auto 6rem;
     }
 
     @media screen and (max-width: $width-tablet) {
-      margin: subtractPercent(17rem, 0.45) auto subtractPercent(10rem, 0.4);
+      margin: subtractPercent(12rem, 0.2) auto 5rem;
+      padding: 0 2rem;
     }
 
     @media screen and (max-width: $width-mobile-large) {
+      margin: subtractPercent(12rem, 0.3) auto 4rem;
       display: block;
     }
+  }
+
+  &__row-1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__row-2 {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
   }
 
   &__image {
@@ -71,13 +86,14 @@
   }
 
   &__content {
-    max-width: 430px;
+    max-width: 600px;
 
     @media screen and (max-width: $width-laptop) {
-      max-width: subtractPercent(430px, 0.2);
+      max-width: subtractPercent(600px, 0.2);
     }
+
     @media screen and (max-width: $width-tablet) {
-      max-width: subtractPercent(430px, 0.3);
+      max-width: subtractPercent(600px, 0.3);
     }
   }
 
@@ -124,21 +140,117 @@
 
   &__list {
     margin-left: 2rem;
+    margin-bottom: 5rem;
     line-height: 4rem;
 
     @media screen and (max-width: $width-laptop) {
       margin-left: subtractPercent(2rem, 0.3);
+      margin-bottom: subtractPercent(5rem, 0.4);
       line-height: subtractPercent(4rem, 0.3);
     }
 
     @media screen and (max-width: $width-tablet) {
       margin-left: subtractPercent(2rem, 0.4);
+      margin-bottom: subtractPercent(5rem, 0.5);
       line-height: subtractPercent(4rem, 0.4);
     }
 
     @media screen and (max-width: $width-mobile-large) {
       margin-left: subtractPercent(2rem, 0.5);
+      margin-bottom: subtractPercent(5rem, 0.6);
       line-height: subtractPercent(4rem, 0.5);
+    }
+  }
+
+  &__education,
+  &__english {
+    max-width: 960px;
+    color: #ffffff60;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+
+    @media screen and (max-width: $width-laptop) {
+      max-width: subtractPercent(960px, 0.2);
+      font-size: subtractPercent(2rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      max-width: max-content;
+      font-size: subtractPercent(2rem, 0.4);
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 3rem;
+
+      @media screen and (max-width: $width-laptop) {
+        margin-bottom: subtractPercent(3rem, 0.3);
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        margin-bottom: subtractPercent(3rem, 0.4);
+      }
+    }
+
+    .time {
+      margin-right: 9.5rem;
+
+      @media screen and (max-width: $width-laptop) {
+        margin-right: subtractPercent(9.5rem, 0.4);
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        margin-right: subtractPercent(9.5rem, 0.5);
+      }
+
+      @media screen and (max-width: $width-mobile-large) {
+        margin-right: subtractPercent(9.5rem, 0.6);
+      }
+    }
+
+    .institution,
+    .faculty-speciality,
+    .degree {
+      margin-bottom: 1rem;
+    }
+
+    .institution {
+      font-weight: 700;
+    }
+  }
+
+  &__education-title,
+  &__english-title {
+    position: relative;
+    width: max-content;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background-color: #11abb0;
+    }
+
+    @media screen and (max-width: $width-laptop) {
+      margin-bottom: subtractPercent(4rem, 0.3);
+      font-size: subtractPercent(2rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-bottom: subtractPercent(4rem, 0.4);
+      font-size: subtractPercent(2rem, 0.4);
     }
   }
 }

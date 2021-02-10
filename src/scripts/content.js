@@ -21,16 +21,16 @@ export const CONTENT = {
   },
   home: {
     title: {
-      en: `I'm Leonid Shatilo.`,
-      ru: 'Я Леонид Шатило.',
+      en: `Leonid Shatilo`,
+      ru: 'Леонид Шатило',
     },
     subtitle: {
-      en: `I'm a Junior Frontend Developer located in Gomel, Belarus.<br />
-        Currently, I'm looking for a job or internship to improve my skills
-        and knowledge. Let's start scrolling and learn more about me.`,
-      ru: `Я начинающий Frontend разработчик, находящийся в Гомеле, Беларусь.<br />
-        В настоящее время я ищу работу или стажировку для совершенствования своих
-        навыков и знаний. Давайте начнем листать и узнаем больше обо мне.`,
+      en: `Junior Frontend Developer. Gomel, Belarus.<br />Currently, I'm 
+          looking for a job or internship to improve my skills and knowledge.<br />
+          Let's start scrolling and learn more about me.`,
+      ru: `Начинающий Frontend разработчик. Гомель, Беларусь.<br />
+          В настоящее время я ищу работу или стажировку для совершенствования своих
+          навыков и знаний.<br />Давайте начнём листать и узнаем больше обо мне.`,
     },
     scrollText: {
       en: `Scroll down`,
@@ -43,50 +43,80 @@ export const CONTENT = {
       ru: 'Обо мне',
     },
     description: {
-      en: `Studied Frontend Development at
-            <a
-              href="https://careers.epam.by/training/upskilllab"
-              target="_blank"
-              >EPAM UpSkill Lab</a
-            >
-            based on
-            <a href="https://rs.school/" target="_blank"
-              >The Rolling Scopes School</a
-            >
-            course under the guidance of a mentor.
-            <br /><br />
-            During the training period I mastered:`,
-      ru: `Изучал Frontend разработку в
-            <a
-              href="https://careers.epam.by/training/upskilllab"
-              target="_blank"
-              >EPAM UpSkill Lab</a
-            >
-            на базе курса
-            <a href="https://rs.school/" target="_blank"
-              >The Rolling Scopes School</a
-            >
-            под руководством ментора.
-            <br /><br />
-            За время обучения я освоил:`,
+      en: `Studied Frontend Development from October 2020 to February 2021 at
+          <a
+            href="https://careers.epam.by/training/upskilllab"
+            target="_blank"
+            >EPAM UpSkill Lab</a
+          >
+          based on
+          <a href="https://rs.school/" target="_blank"
+            >The Rolling Scopes School</a
+          >
+          course under the guidance of a mentor.
+          <br /><br />
+          During the training period I mastered:`,
+      ru: `Изучал Frontend разработку в период с октября 2020 года по февраль 
+          2021 года в
+          <a
+            href="https://careers.epam.by/training/upskilllab"
+            target="_blank"
+            >EPAM UpSkill Lab</a
+          >
+          на базе курса 
+          <a href="https://rs.school/" target="_blank">
+            The Rolling Scopes School</a
+          >
+          под руководством ментора.<br ><br />
+          За время обучения я освоил:`,
     },
-    versionControl: {
-      en: 'Version Control System',
-      ru: 'Система контроля версий',
+    methodologyBem: {
+      en: 'Methodology BEM',
+      ru: 'Методолгия БЭМ',
     },
-    moduleBundler: {
-      en: 'Module bundler',
-      ru: 'Сборщик модулей',
+    education: {
+      title: {
+        en: `Education`,
+        ru: `Образование`,
+      },
+      institution: {
+        en: `Pavel Sukhoi State Technical University of Gomel`,
+        ru: `Гомельский государственный технический университет им. П.О. Сухого`,
+      },
+      specialityMaster: {
+        en: `Mechanics And Technology, Metallurgy`,
+        ru: `Механико-технологический, Металлургия`,
+      },
+      specialityBachelor: {
+        en: `Mechanics And Technology, Foundry Machines and Technology`,
+        ru: `Механико-технологический, Машины и технология литейного производства`,
+      },
+      degreeMaster: {
+        en: `Master`,
+        ru: `Магистр технических наук`,
+      },
+      degreeBachelor: {
+        en: `Bachelor`,
+        ru: `Инженер`,
+      },
     },
-    preprocessor: {
-      en: 'Preprocessor',
-      ru: 'Препроцессор',
+    english: {
+      title: {
+        en: 'English',
+        ru: 'Английский',
+      },
+      description: {
+        en: `At the moment my English level is A1+. I am constantly striving 
+            to improve my level.`,
+        ru: `На данный момент мой уровень английского языка A1+.
+            Я постоянно стремлюсь повысить свой уровень.`,
+      },
     },
   },
   portfolio: {
     header: {
-      en: 'My works, made in the process of learning',
-      ru: 'Мои работы, сделанные в процессе обучения',
+      en: 'Portfolio',
+      ru: 'Портфолио',
     },
     filter: {
       en: 'All',
@@ -239,10 +269,10 @@ export const CONTENT = {
       ru: `Скажи привет`,
     },
     subtitle: {
-      en: `Do you have an offer for me? Nice! Let's collaborate and create 
-        something awesome together.`,
-      ru: `У вас есть предложение для меня? Здорово! Давайте вместе создадим 
-        что-нибудь потрясающее.`,
+      en: `Would you like to contact me? Nice! Let's collaborate and create 
+          something awesome together.`,
+      ru: `Хотели бы связаться со мной? Здорово! Давайте вместе создадим 
+          что-нибудь потрясающее.`,
     },
     email: {
       en: `E-mail`,
