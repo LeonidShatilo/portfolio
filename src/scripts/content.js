@@ -163,9 +163,9 @@ export const CONTENT = {
     },
     socket: {
       en: `Chat application for sending and receiving messages in real time.
-          The application has a client part and a server part.<br /><br />The demonstration 
-          requires you to clone the repository, install the dependencies, and 
-          run the server.`,
+          The application has a client part and a server part.<br /><br />
+          For the demonstration requires you to clone the repository, 
+          install the dependencies, and run the server.`,
       ru: `Чат-приложение для отправки и получения сообщений в режиме 
           реального времени. Приложение имеет клиентскую и серверную часть.<br /><br />
           Для демонстрации необходимо склонировать репозиторий, установить 
