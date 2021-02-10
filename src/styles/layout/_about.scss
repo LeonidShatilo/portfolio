@@ -1,0 +1,256 @@
+#about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  user-select: none;
+}
+
+.about {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1280px;
+    height: max-content;
+    margin: 12rem auto 7rem;
+    padding: 0 4rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin: subtractPercent(12rem, 0.1) auto 6rem;
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin: subtractPercent(12rem, 0.2) auto 5rem;
+      padding: 0 2rem;
+    }
+
+    @media screen and (max-width: $width-mobile-large) {
+      margin: subtractPercent(12rem, 0.3) auto 4rem;
+      display: block;
+    }
+  }
+
+  &__row-1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__row-2 {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  &__image {
+    margin-right: 10rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin-right: subtractPercent(10rem, 0.4);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-right: subtractPercent(10rem, 0.6);
+    }
+
+    @media screen and (max-width: $width-mobile-large) {
+      display: flex;
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+
+    & img {
+      width: 200px;
+      height: 200px;
+      border: 1.5rem solid #ffffff05;
+      border-radius: 50%;
+      pointer-events: none;
+
+      @media screen and (max-width: $width-laptop) {
+        width: subtractPercent(200px, 0.3);
+        height: subtractPercent(200px, 0.3);
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        width: subtractPercent(200px, 0.4);
+        height: subtractPercent(200px, 0.4);
+      }
+
+      @media screen and (max-width: $width-mobile-large) {
+        width: subtractPercent(200px, 0.3);
+        height: subtractPercent(200px, 0.3);
+      }
+    }
+  }
+
+  &__content {
+    max-width: 600px;
+
+    @media screen and (max-width: $width-laptop) {
+      max-width: subtractPercent(600px, 0.2);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      max-width: subtractPercent(600px, 0.3);
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+
+    @media screen and (max-width: $width-laptop) {
+      font-size: subtractPercent(3rem, 0.3);
+    }
+    @media screen and (max-width: $width-tablet) {
+      font-size: subtractPercent(3rem, 0.4);
+    }
+  }
+
+  &__description,
+  &__list {
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #ffffff60;
+
+    @media screen and (max-width: $width-laptop) {
+      font-size: subtractPercent(2rem, 0.3);
+    }
+    @media screen and (max-width: $width-tablet) {
+      font-size: subtractPercent(2rem, 0.4);
+    }
+  }
+
+  &__description a {
+    color: #ffffff60;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+    line-height: 4rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin-left: subtractPercent(2rem, 0.3);
+      margin-bottom: subtractPercent(5rem, 0.4);
+      line-height: subtractPercent(4rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-left: subtractPercent(2rem, 0.4);
+      margin-bottom: subtractPercent(5rem, 0.5);
+      line-height: subtractPercent(4rem, 0.4);
+    }
+
+    @media screen and (max-width: $width-mobile-large) {
+      margin-left: subtractPercent(2rem, 0.5);
+      margin-bottom: subtractPercent(5rem, 0.6);
+      line-height: subtractPercent(4rem, 0.5);
+    }
+  }
+
+  &__education,
+  &__english {
+    max-width: 960px;
+    color: #ffffff60;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+
+    @media screen and (max-width: $width-laptop) {
+      max-width: subtractPercent(960px, 0.2);
+      font-size: subtractPercent(2rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      max-width: max-content;
+      font-size: subtractPercent(2rem, 0.4);
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 3rem;
+
+      @media screen and (max-width: $width-laptop) {
+        margin-bottom: subtractPercent(3rem, 0.3);
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        margin-bottom: subtractPercent(3rem, 0.4);
+      }
+    }
+
+    .time {
+      margin-right: 9.5rem;
+
+      @media screen and (max-width: $width-laptop) {
+        margin-right: subtractPercent(9.5rem, 0.4);
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        margin-right: subtractPercent(9.5rem, 0.5);
+      }
+
+      @media screen and (max-width: $width-mobile-large) {
+        margin-right: subtractPercent(9.5rem, 0.6);
+      }
+    }
+
+    .institution,
+    .faculty-speciality,
+    .degree {
+      margin-bottom: 1rem;
+    }
+
+    .institution {
+      font-weight: 700;
+    }
+  }
+
+  &__education-title,
+  &__english-title {
+    position: relative;
+    width: max-content;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background-color: #11abb0;
+    }
+
+    @media screen and (max-width: $width-laptop) {
+      margin-bottom: subtractPercent(4rem, 0.3);
+      font-size: subtractPercent(2rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-bottom: subtractPercent(4rem, 0.4);
+      font-size: subtractPercent(2rem, 0.4);
+    }
+  }
+}

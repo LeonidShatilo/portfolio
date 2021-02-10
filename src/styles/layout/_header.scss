@@ -1,0 +1,155 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  z-index: 100;
+  user-select: none;
+  transition: background-color 0.5s ease-in-out;
+
+  @media screen and (max-width: $width-mobile-large) {
+    justify-content: flex-start;
+  }
+
+  &__nav {
+    margin: 2.5rem 0 0 0;
+
+    & ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      @media screen and (max-width: $width-mobile-large) {
+        margin-left: 2rem;
+      }
+    }
+
+    & li {
+      font-size: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      list-style-type: none;
+      margin-right: 3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        font-size: subtractPercent(1.5rem, 0.2);
+        margin-right: subtractPercent(3rem, 0.4);
+      }
+
+      @media screen and (max-width: $width-mobile-large) {
+        margin-right: 1.3rem;
+      }
+    }
+
+    & a {
+      color: #ffffff;
+      opacity: 0.6;
+      transition: opacity 0.5s linear;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.language-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 0 0 0;
+  width: min-content;
+  height: min-content;
+  right: 2.5rem;
+
+  @media screen and (max-width: $width-tablet) {
+    right: subtractPercent(2.5rem, 0.2);
+  }
+}
+
+.current-language {
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+
+.button__language {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: opacity 0.5s linear;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: $width-tablet) {
+    font-size: subtractPercent(1.5rem, 0.2);
+  }
+}
+
+.button__nav--active a {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.arrow {
+  width: 10px;
+  height: 10px;
+  background-size: 100%;
+  background-image: url('../../assets/images/svg/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease-in-out;
+
+  &--up {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdown-menu {
+  position: relative;
+  max-height: 0;
+  width: fit-content;
+  padding: 0.5rem;
+  top: -0.5rem;
+  left: -0.5rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.1, 0.5, 0.5, 1),
+    opacity 0.5s linear, background-color 0.6s ease-in-out;
+
+  &__item--active {
+    opacity: 1;
+    cursor: default;
+  }
+
+  &--open {
+    max-height: 7rem;
+    height: auto;
+    opacity: 1;
+  }
+}
+
+.background {
+  background-color: #000000;
+}

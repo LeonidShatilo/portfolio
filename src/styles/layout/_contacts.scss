@@ -1,0 +1,188 @@
+#contacts {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #141414;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  user-select: none;
+}
+
+.contacts {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1280px;
+    height: max-content;
+    margin: 25vh auto 10rem;
+    padding: 0 4rem;
+
+    @media screen and (max-width: $width-laptop) {
+      margin: subtractPercent(25vh, 0.3) auto subtractPercent(10rem, 0.4);
+      padding: 0 2.5rem;
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin: subtractPercent(25vh, 0.4) auto subtractPercent(10rem, 0.5);
+    }
+  }
+
+  &__title {
+    position: relative;
+    width: max-content;
+    margin-bottom: 6rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 2rem;
+    font-weight: 600;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background-color: #11abb0;
+    }
+
+    @media screen and (max-width: $width-laptop) {
+      margin-bottom: subtractPercent(6rem, 0.3);
+      font-size: subtractPercent(2rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-bottom: subtractPercent(6rem, 0.4);
+      font-size: subtractPercent(2rem, 0.4);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: $width-tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__subtitle {
+    font-size: 5rem;
+    font-weight: 400;
+    margin-right: 15rem;
+    max-width: 700px;
+
+    @media screen and (max-width: $width-laptop) {
+      margin-right: subtractPercent(15rem, 0.3);
+      font-size: subtractPercent(5rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-bottom: 4rem;
+      margin-right: 0;
+      font-size: subtractPercent(5rem, 0.4);
+    }
+  }
+
+  &__button {
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 0.35rem;
+    color: #ffffff;
+    padding: 2rem;
+    background-color: #11abb0;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f06000;
+    }
+  }
+}
+
+.contacts-block {
+  color: #808080;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+
+  @media screen and (max-width: $width-laptop) {
+    margin-bottom: subtractPercent(4rem, 0.3);
+    font-size: subtractPercent(3rem, 0.3);
+  }
+
+  @media screen and (max-width: $width-tablet) {
+    margin-bottom: subtractPercent(4rem, 0.4);
+    font-size: subtractPercent(3rem, 0.4);
+  }
+
+  &__header {
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  &__content a {
+    font-weight: 400;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #f06000;
+    }
+  }
+}
+
+.form {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 555px;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__wrapper form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__name,
+  &__email,
+  &__message {
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 2px solid #3a3a3a;
+    border-radius: 0.7rem;
+  }
+
+  &__message {
+    height: 150px;
+    resize: none;
+  }
+
+  &__button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background-color: #f06000;
+      color: #ffffff;
+    }
+  }
+}

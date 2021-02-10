@@ -1,0 +1,215 @@
+#home {
+  position: relative;
+  height: 100vh;
+}
+
+.introduce {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 4rem;
+  max-width: 1040px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  user-select: none;
+  z-index: 5;
+
+  &__title {
+    margin: 0 0 1.6rem 0;
+    width: 100%;
+    font-size: 9.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+
+    @media screen and (max-width: $width-laptop) {
+      font-size: subtractPercent(9.5rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      font-size: subtractPercent(9.5rem, 0.4);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding-bottom: 4rem;
+    width: 100%;
+    font-size: 2.5rem;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
+    color: #ffffffbc;
+
+    @media screen and (max-width: $width-laptop) {
+      max-width: 670px;
+      font-size: subtractPercent(2.5rem, 0.3);
+      padding-bottom: subtractPercent(4rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      max-width: 570px;
+      font-size: subtractPercent(2.5rem, 0.4);
+      padding-bottom: subtractPercent(4rem, 0.4);
+    }
+  }
+}
+
+.social-media {
+  margin-top: 3rem;
+
+  @media screen and (max-width: $width-laptop) {
+    margin-top: subtractPercent(3rem, 0.3);
+  }
+
+  @media screen and (max-width: $width-tablet) {
+    margin-top: subtractPercent(3rem, 0.4);
+  }
+
+  &__link {
+    font-size: 0;
+    margin-right: 2.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: $width-laptop) {
+      margin-right: subtractPercent(2.5rem, 0.3);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      margin-right: subtractPercent(2.5rem, 0.4);
+    }
+
+    .icon {
+      width: 30px;
+      height: 35px;
+      opacity: 0.65;
+      transition: opacity 0.5s linear;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @media screen and (max-width: $width-laptop) {
+        width: subtractPercent(30px, 0.3);
+        height: subtractPercent(35px, 0.3);
+      }
+
+      @media screen and (max-width: $width-tablet) {
+        width: subtractPercent(30px, 0.4);
+        height: subtractPercent(35px, 0.4);
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    text-align: center;
+    height: 1px;
+    width: 250px;
+    background-color: #ffffff40;
+    transform: translate(-50%, -70px);
+    bottom: 0;
+    left: 50%;
+
+    @media screen and (max-width: $width-laptop) {
+      width: subtractPercent(250px, 0.3);
+      transform: translate(-50%, subtractPercent(-70px, 0.3));
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      width: subtractPercent(250px, 0.4);
+      transform: translate(-50%, subtractPercent(-70px, 0.4));
+    }
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+
+  &:hover .scroll-text::after,
+  &:focus .scroll-text::after {
+    width: 98%;
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+    transition: opacity 0.5s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .scroll-arrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 1.6rem;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    @media screen and (max-width: $width-laptop) {
+      width: subtractPercent(32px, 0.1);
+      height: subtractPercent(32px, 0.1);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      width: subtractPercent(32px, 0.2);
+      height: subtractPercent(32px, 0.2);
+    }
+  }
+
+  .scroll-text {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    line-height: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      width: 0;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #ffffff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media screen and (max-width: $width-laptop) {
+      font-size: subtractPercent(1rem, 0.1);
+      letter-spacing: subtractPercent(0.4rem, 0.1);
+    }
+
+    @media screen and (max-width: $width-tablet) {
+      font-size: subtractPercent(1rem, 0.1);
+      letter-spacing: subtractPercent(0.4rem, 0.1);
+    }
+  }
+}
