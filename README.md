@@ -2,7 +2,7 @@
 
 **[Task](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/Portfolio.md)**
 
-**[DEMO](https://leonidshatilo-portfolio.netlify.app/)**
+**[DEMO](https://leonidshatilo-portfolio.netlify.app)**
 
 ---
 
