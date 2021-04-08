@@ -1,4 +1,4 @@
-#contacts {
+.contacts {
   position: relative;
   display: flex;
   justify-content: center;
@@ -7,9 +7,7 @@
   font-family: 'Inter', sans-serif;
   color: #ffffff;
   user-select: none;
-}
 
-.contacts {
   &__wrapper {
     display: flex;
     flex-direction: column;
