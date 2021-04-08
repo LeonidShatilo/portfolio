@@ -13,6 +13,6 @@ export function removePreloader() {
     document.body.classList.remove('no-scroll');
   }, 1400);
   setTimeout(() => {
-    document.body.removeChild(document.body.children[0]);
+    PRELOADER.remove();
   }, 2000);
 }
