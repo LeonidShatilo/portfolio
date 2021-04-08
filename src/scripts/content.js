@@ -106,9 +106,9 @@ export const CONTENT = {
         ru: 'Английский',
       },
       description: {
-        en: `At the moment my English level is A1+. I am constantly striving 
+        en: `At the moment my English level is A2. I am constantly striving 
             to improve my level.`,
-        ru: `На данный момент мой уровень английского языка A1+.
+        ru: `На данный момент мой уровень английского языка A2.
             Я постоянно стремлюсь повысить свой уровень.`,
       },
     },
