@@ -1,10 +1,7 @@
 # portfolio
 
-**[Task](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/Portfolio.md)**
-
-**[DEMO](https://leonidshatilo-portfolio.netlify.app)**
-
----
+[![TASK](https://img.shields.io/badge/-TASK-green?style=flat)](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/Portfolio.md)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2c853dd-1388-41ea-b875-430f1b07e158/deploy-status)](https://leonidshatilo-portfolio.netlify.app)
 
 **Description**
 
